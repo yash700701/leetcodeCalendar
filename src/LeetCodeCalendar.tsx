@@ -51,7 +51,7 @@ const LeetCodeCalendar: React.FC<Props> = ({
 
     try {
 
-      const response = await fetch('http://192.168.1.113:4000/leetcode', {
+      const response = await fetch('https://leetcodecalendar.onrender.com/leetcode', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
