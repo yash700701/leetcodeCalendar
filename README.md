@@ -2,7 +2,8 @@
 
 A customizable React component to display a GitHub-like contribution calendar based on your LeetCode submissions. Easily installable via npm and styled with themes!
 
-https://raw.githubusercontent.com/yash700701/leetcodecalendar/main/image/demoComponentImage.png
+![LeetCode Calendar Demo](https://raw.githubusercontent.com/yash700701/leetcodecalendar/main/image/demoComponentImage.png)
+
 
 
 ---
