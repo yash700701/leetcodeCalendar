@@ -135,21 +135,19 @@ const LeetCodeCalendar: React.FC<Props> = ({
     <div
       style={{
         color: theme.text,
-        padding: 10,
         fontFamily: 'sans-serif',
         fontSize,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
         ...style,
-        width: '100%',
 
       }}
     >
       <div style={{ marginBottom: 10 }}>{username}'s LeetCode Activity</div>
       <div >
-        <div style={{ display: 'flex', flexDirection: 'column', background: theme.background, padding: '7px'}}>
-            <div style={{ overflowX: 'auto', whiteSpace: 'nowrap', width: '100%' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', background: theme.background }}>
+            <div style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
                 {generateGrid()}
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row', marginTop: 10, fontSize: 12, color: theme.text }}>
@@ -157,15 +155,14 @@ const LeetCodeCalendar: React.FC<Props> = ({
                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
                         <p style={{ margin: 0 }}>Less</p>
                         <div style={{ width: '12px', height: '12px', backgroundColor: theme.level0, borderRadius: 2 }}></div>
-                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level1, borderRadius: 2 }}></div>
-                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level2, borderRadius: 2 }}></div>
-                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level3, borderRadius: 2 }}></div>
                         <div style={{ width: '12px', height: '12px', backgroundColor: theme.level4, borderRadius: 2 }}></div>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level3, borderRadius: 2 }}></div>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level2, borderRadius: 2 }}></div>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level1, borderRadius: 2 }}></div>
                         <p style={{ margin: 0 }}>More</p>
                     </div>
             </div>
         </div>
-        
       </div>
     </div>
   );
