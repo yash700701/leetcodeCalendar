@@ -2,16 +2,16 @@
 
 A customizable React component to display a GitHub-like contribution calendar based on your LeetCode submissions. Easily installable via npm and styled with themes!
 
-![LeetCode Calendar Demo](https://raw.githubusercontent.com/yashx700/leetcodecalendar/main/assets/demo.png)
+![LeetCode Calendar Demo](https://raw.githubusercontent.com/yash700701/leetcodecalendar/image/demoComponentImage.png)
 
 ---
 
 ## ✨ Features
 
-- 📅 Displays LeetCode submission activity in a contribution-style calendar.
-- 🎨 Fully customizable: block size, spacing, fonts, and color themes.
-- ⚙️ Works in both SSR and CSR environments.
-- 🔐 CORS-safe using a simple Node.js proxy server.
+- Displays LeetCode submission activity in a contribution-style calendar.
+- Fully customizable: block size, spacing, fonts, and color themes.
+- Works in both SSR and CSR environments.
+- CORS-safe using a simple Node.js proxy server.
 
 ---
 

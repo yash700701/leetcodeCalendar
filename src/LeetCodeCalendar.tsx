@@ -37,6 +37,7 @@ const LeetCodeCalendar: React.FC<Props> = ({
 }) => {
   const [data, setData] = useState<Record<string, number>>({});
   const [loading, setLoading] = useState(true);
+  let totalSubmissions = 0;
 
   const fetchCalendar = async () => {
     const query = `
@@ -99,6 +100,7 @@ const LeetCodeCalendar: React.FC<Props> = ({
       const iso = date.toISOString().split('T')[0];
       const count = data[iso] || 0;
       const color = getColor(count);
+      totalSubmissions += count;
 
       const dayIndex = date.getDay();
       days[dayIndex].unshift(
@@ -140,13 +142,28 @@ const LeetCodeCalendar: React.FC<Props> = ({
         flexDirection: 'column',
         alignItems: 'flex-start',
         ...style,
+        width: '100%',
 
       }}
     >
       <div style={{ marginBottom: 10 }}>{username}'s LeetCode Activity</div>
       <div >
-        <div style={{ display: 'flex', flexDirection: 'column', background: theme.background, padding: '7px' , overscrollBehaviorX: 'auto'}}>
-            {generateGrid()}
+        <div style={{ display: 'flex', flexDirection: 'column', background: theme.background, padding: '7px'}}>
+            <div style={{ overflowX: 'auto', whiteSpace: 'nowrap', width: '100%' }}>
+                {generateGrid()}
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row', marginTop: 10, fontSize: 12, color: theme.text }}>
+                <div>{`Total submissions in one year: ${totalSubmissions}`}</div>
+                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                        <p style={{ margin: 0 }}>Less</p>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level0, borderRadius: 2 }}></div>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level1, borderRadius: 2 }}></div>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level2, borderRadius: 2 }}></div>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level3, borderRadius: 2 }}></div>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level4, borderRadius: 2 }}></div>
+                        <p style={{ margin: 0 }}>More</p>
+                    </div>
+            </div>
         </div>
         
       </div>
