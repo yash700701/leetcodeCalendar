@@ -2,34 +2,35 @@
 
 A customizable React component to display a GitHub-like contribution calendar based on your LeetCode submissions. Easily installable via npm and styled with themes!
 
-![LeetCode Calendar Demo](https://your-demo-screenshot-or-gif-url)
+![LeetCode Calendar Demo](https://raw.githubusercontent.com/yashx700/leetcodecalendar/main/assets/demo.png)
 
 ---
 
-## Features
+## ✨ Features
 
-- Displays LeetCode submission activity in a calendar format.
-- Customizable block size, spacing, font, and themes.
-- Works with SSR and client-side rendering.
-- CORS-safe by using a simple Node.js proxy server.
+- 📅 Displays LeetCode submission activity in a contribution-style calendar.
+- 🎨 Fully customizable: block size, spacing, fonts, and color themes.
+- ⚙️ Works in both SSR and CSR environments.
+- 🔐 CORS-safe using a simple Node.js proxy server.
 
 ---
 
-## Installation
+## 📦 Installation
 
 ```bash
 npm install @yashx700/leetcodecalendar
 
-## Usage
+## 📚 Usage
 
-```bash
-import {LeetCodeCalendar} from '@yashx700/leetcodecalendar'
+```jsx
+import { LeetCodeCalendar } from '@yashx700/leetcodecalendar';
+
 <LeetCodeCalendar
-    username="yash_tiwari700"
-    blockSize={14}
-    blockMargin={3}
-    fontSize={14}
-    theme={{
+  username="yash_tiwari700"
+  blockSize={14}
+  blockMargin={3}
+  fontSize={14}
+  theme={{
     background: 'transparent',
     text: '#000000ff',
     level0: '#d5d5d5ff',
@@ -37,6 +38,6 @@ import {LeetCodeCalendar} from '@yashx700/leetcodecalendar'
     level2: '#006d32',
     level3: '#26a641',
     level4: '#39d353',
-    }}
-    style={{ maxWidth: '800px' }}
+  }}
+  style={{ maxWidth: '800px' }}
 />
