@@ -16,6 +16,5 @@ createRoot(document.getElementById('root')!).render(
       level3: '#26a641',
       level4: '#39d353',
     }}
-    style={{ maxWidth: '800px' }}
   />
 );
