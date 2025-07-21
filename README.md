@@ -27,19 +27,21 @@ npm install @yashx700/leetcodecalendar
 ```jsx
 import { LeetCodeCalendar } from '@yashx700/leetcodecalendar';
 
-<LeetCodeCalendar
-  username="leetcode username"
-  blockSize={14}
-  blockMargin={3}
-  fontSize={14}
-  theme={{
-    background: 'transparent',
-    text: '#000000ff',
-    level0: '#d5d5d5ff',
-    level1: '#0e4429',
-    level2: '#006d32',
-    level3: '#26a641',
-    level4: '#39d353',
-  }}
-  style={{ maxWidth: '800px' }}
-/>
+<div className="w-full overflow-x-scroll" >
+    <LeetCodeCalendar
+        username="leetcode username"
+        blockSize={14}
+        blockMargin={3}
+        fontSize={14}
+        theme={{
+        background: 'transparent',
+        text: '#000000ff',
+        level0: '#d5d5d5ff',
+        level1: '#0e4429',
+        level2: '#006d32',
+        level3: '#26a641',
+        level4: '#39d353',
+        }}
+        style={{  }}
+    />
+</div>

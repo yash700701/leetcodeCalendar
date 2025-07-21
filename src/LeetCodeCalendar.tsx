@@ -141,7 +141,6 @@ const LeetCodeCalendar: React.FC<Props> = ({
         flexDirection: 'column',
         alignItems: 'flex-start',
         ...style,
-
       }}
     >
       <div style={{ marginBottom: 10 }}>{username}'s LeetCode Activity</div>
