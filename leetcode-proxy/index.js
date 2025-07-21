@@ -3,7 +3,7 @@ const axios = require('axios');
 const cors = require('cors');
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json());
@@ -20,6 +20,10 @@ app.post('/leetcode', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch from LeetCode' });
   }
 });
+
+app.get('/', (res)=>{
+    res.send('LeetCode Proxy is running at port ' + PORT);
+})
 
 app.listen(PORT, () => {
   console.log(`Proxy running at http://localhost:${PORT}`);
