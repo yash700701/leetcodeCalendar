@@ -2,6 +2,7 @@ import React, { JSX, useEffect, useState } from 'react';
 
 type Props = {
   username: string;
+  borderRadius?: number;
   blockSize?: number;
   blockMargin?: number;
   fontSize?: number;
@@ -29,6 +30,7 @@ const defaultTheme = {
 
 const LeetCodeCalendar: React.FC<Props> = ({
   username,
+  borderRadius = 2,
   blockSize = 15,
   blockMargin = 5,
   fontSize = 14,
@@ -112,7 +114,7 @@ const LeetCodeCalendar: React.FC<Props> = ({
             height: blockSize,
             margin: blockMargin / 2,
             backgroundColor: color,
-            borderRadius: 2,
+            borderRadius,
           }}
         />
       );
@@ -145,19 +147,19 @@ const LeetCodeCalendar: React.FC<Props> = ({
     >
       <div style={{ marginBottom: 10 }}>{username}'s LeetCode Activity</div>
       <div >
-        <div style={{ display: 'flex', flexDirection: 'column', background: theme.background }}>
-            <div style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div style={{ overflowX: 'auto', whiteSpace: 'nowrap', background: theme.background }}>
                 {generateGrid()}
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row', marginTop: 10, fontSize: 12, color: theme.text }}>
                 <div>{`Total submissions in one year: ${totalSubmissions}`}</div>
                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
                         <p style={{ margin: 0 }}>Less</p>
-                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level0, borderRadius: 2 }}></div>
-                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level4, borderRadius: 2 }}></div>
-                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level3, borderRadius: 2 }}></div>
-                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level2, borderRadius: 2 }}></div>
-                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level1, borderRadius: 2 }}></div>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level0, borderRadius }}></div>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level4, borderRadius }}></div>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level3, borderRadius }}></div>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level2, borderRadius }}></div>
+                        <div style={{ width: '12px', height: '12px', backgroundColor: theme.level1, borderRadius }}></div>
                         <p style={{ margin: 0 }}>More</p>
                     </div>
             </div>

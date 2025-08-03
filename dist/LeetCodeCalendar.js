@@ -9,7 +9,7 @@ const defaultTheme = {
     level3: '#239a3b',
     level4: '#196127',
 };
-const LeetCodeCalendar = ({ username, blockSize = 15, blockMargin = 5, fontSize = 14, theme = defaultTheme, style = {}, }) => {
+const LeetCodeCalendar = ({ username, borderRadius = 2, blockSize = 15, blockMargin = 5, fontSize = 14, theme = defaultTheme, style = {}, }) => {
     const [data, setData] = useState({});
     const [loading, setLoading] = useState(true);
     let totalSubmissions = 0;
@@ -78,7 +78,7 @@ const LeetCodeCalendar = ({ username, blockSize = 15, blockMargin = 5, fontSize 
                     height: blockSize,
                     margin: blockMargin / 2,
                     backgroundColor: color,
-                    borderRadius: 2,
+                    borderRadius,
                 } }, iso));
         }
         return days.map((week, idx) => (_jsx("div", { style: { display: 'flex', flexDirection: 'row' }, children: week }, idx)));
@@ -96,6 +96,6 @@ const LeetCodeCalendar = ({ username, blockSize = 15, blockMargin = 5, fontSize 
             flexDirection: 'column',
             alignItems: 'flex-start',
             ...style,
-        }, children: [_jsxs("div", { style: { marginBottom: 10 }, children: [username, "'s LeetCode Activity"] }), _jsx("div", { children: _jsxs("div", { style: { display: 'flex', flexDirection: 'column', background: theme.background }, children: [_jsx("div", { style: { overflowX: 'auto', whiteSpace: 'nowrap' }, children: generateGrid() }), _jsxs("div", { style: { display: 'flex', justifyContent: 'space-between', flexDirection: 'row', marginTop: 10, fontSize: 12, color: theme.text }, children: [_jsx("div", { children: `Total submissions in one year: ${totalSubmissions}` }), _jsxs("div", { style: { display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }, children: [_jsx("p", { style: { margin: 0 }, children: "Less" }), _jsx("div", { style: { width: '12px', height: '12px', backgroundColor: theme.level0, borderRadius: 2 } }), _jsx("div", { style: { width: '12px', height: '12px', backgroundColor: theme.level4, borderRadius: 2 } }), _jsx("div", { style: { width: '12px', height: '12px', backgroundColor: theme.level3, borderRadius: 2 } }), _jsx("div", { style: { width: '12px', height: '12px', backgroundColor: theme.level2, borderRadius: 2 } }), _jsx("div", { style: { width: '12px', height: '12px', backgroundColor: theme.level1, borderRadius: 2 } }), _jsx("p", { style: { margin: 0 }, children: "More" })] })] })] }) })] }));
+        }, children: [_jsxs("div", { style: { marginBottom: 10 }, children: [username, "'s LeetCode Activity"] }), _jsx("div", { children: _jsxs("div", { style: { display: 'flex', flexDirection: 'column' }, children: [_jsx("div", { style: { overflowX: 'auto', whiteSpace: 'nowrap', background: theme.background }, children: generateGrid() }), _jsxs("div", { style: { display: 'flex', justifyContent: 'space-between', flexDirection: 'row', marginTop: 10, fontSize: 12, color: theme.text }, children: [_jsx("div", { children: `Total submissions in one year: ${totalSubmissions}` }), _jsxs("div", { style: { display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }, children: [_jsx("p", { style: { margin: 0 }, children: "Less" }), _jsx("div", { style: { width: '12px', height: '12px', backgroundColor: theme.level0, borderRadius } }), _jsx("div", { style: { width: '12px', height: '12px', backgroundColor: theme.level4, borderRadius } }), _jsx("div", { style: { width: '12px', height: '12px', backgroundColor: theme.level3, borderRadius } }), _jsx("div", { style: { width: '12px', height: '12px', backgroundColor: theme.level2, borderRadius } }), _jsx("div", { style: { width: '12px', height: '12px', backgroundColor: theme.level1, borderRadius } }), _jsx("p", { style: { margin: 0 }, children: "More" })] })] })] }) })] }));
 };
 export default LeetCodeCalendar;

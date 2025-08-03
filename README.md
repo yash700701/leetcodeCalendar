@@ -3,6 +3,7 @@
 A customizable React component to display a GitHub-like contribution calendar based on your LeetCode submissions. Easily installable via npm and styled with themes!
 
 ![LeetCode Calendar Demo](https://raw.githubusercontent.com/yash700701/leetcodecalendar/main/image/demoComponentImage.png)
+![LeetCode Calendar Demo](https://raw.githubusercontent.com/yash700701/leetcodecalendar/main/image/demoComponentImage2.png)
 
 
 
@@ -30,6 +31,7 @@ import { LeetCodeCalendar } from '@yashx700/leetcodecalendar';
 <div className="w-full overflow-x-scroll" >
     <LeetCodeCalendar
         username="leetcode username"
+        borderRadius={2}  // 10 for circle
         blockSize={14}
         blockMargin={3}
         fontSize={14}

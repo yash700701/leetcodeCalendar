@@ -1,6 +1,7 @@
 import React from 'react';
 type Props = {
     username: string;
+    borderRadius?: number;
     blockSize?: number;
     blockMargin?: number;
     fontSize?: number;
