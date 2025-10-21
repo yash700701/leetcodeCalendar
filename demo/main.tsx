@@ -5,7 +5,7 @@ createRoot(document.getElementById('root')!).render(
   <LeetCodeCalendar
     username="yash_tiwari700"
     blockSize={16}
-    borderRadius={10}
+    borderRadius={2}
     blockMargin={3}
     fontSize={14}
     theme={{

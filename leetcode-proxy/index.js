@@ -21,8 +21,8 @@ app.post('/leetcode', async (req, res) => {
   }
 });
 
-app.get('/', (res)=>{
-    res.send('LeetCode Proxy is running at port ' + PORT);
+app.get('/', (req, res) => {
+    res.json({ message: 'LeetCode Proxy is running at port ' + PORT });
 })
 
 app.listen(PORT, () => {
