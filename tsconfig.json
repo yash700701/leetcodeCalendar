@@ -3,6 +3,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "jsx": "react-jsx",
+    
     "lib": ["DOM", "ESNext"], 
     "declaration": true,
     "outDir": "dist",
@@ -10,5 +11,5 @@
     "esModuleInterop": true,
     "moduleResolution": "node"
   },
-  "include": ["src"]
+  "include": ["src", "vite-env.d.ts"]
 }

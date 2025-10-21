@@ -24,7 +24,7 @@ const LeetCodeCalendar = ({ username, borderRadius = 2, blockSize = 15, blockMar
       }
     `;
         try {
-            const response = await fetch('https://leetcodecalendar.onrender.com/leetcode', {
+            const response = await fetch('https://leetcodecalendar-622147005340.asia-south2.run.app/leetcode', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

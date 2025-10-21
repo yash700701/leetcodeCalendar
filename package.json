@@ -1,11 +1,16 @@
 {
   "name": "@yashx700/leetcodecalendar",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
-  "keywords": ["leetcode", "calendar", "react-component", "contribution graph"],
+  "keywords": [
+    "leetcode",
+    "calendar",
+    "react-component",
+    "contribution graph"
+  ],
   "author": "Yash Tiwari <yashtiwari700714@gmail.com> (https://github.com/yash700701)",
   "license": "MIT",
   "description": "A React component to display a GitHub-style LeetCode submission calendar.",
@@ -14,6 +19,7 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@types/node": "^24.9.1",
     "@types/react": "^19.1.8",
     "@vitejs/plugin-react": "^4.7.0",
     "rollup": "^4.45.1",
